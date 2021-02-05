@@ -1,3 +1,14 @@
-﻿<div class="my-component">
+﻿
+@inject IJSRuntime JS;
+
+<div class="my-component">
     This Blazor component is defined in the <strong>DynamicTable</strong> package.
 </div>
+
+@code{
+    protected override async Task OnInitializedAsync()
+    {
+        await using var js = new ExampleJsInterop(JS);
+        await js.Prompt("12314124");
+    }
+}
