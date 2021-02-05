@@ -1,15 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="protobuf-net.Grpc" Version="1.0.147" />
-  </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\DynamicTable.Shared\DynamicTable.Shared.csproj" />
+      <ProjectReference Include="..\DynamicTable\DynamicTable.csproj" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\DynamicTable\DynamicTable.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Grpc.Net.Client.Web" Version="2.35.0-pre1" />
+      <PackageReference Include="protobuf-net.Grpc.ClientFactory" Version="1.0.147" />
+    </ItemGroup>
 
 </Project>

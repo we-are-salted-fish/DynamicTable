@@ -4,7 +4,6 @@
     <TargetFramework>net5.0</TargetFramework>
     <StaticWebAssetBasePath>_content/dynamicTable</StaticWebAssetBasePath>
   </PropertyGroup>
-
   
   <ItemGroup>
     <SupportedPlatform Include="browser" />
@@ -12,6 +11,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicTable.Shared\DynamicTable.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -13,11 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable", "src\Dynamic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Wasm", "samples\DynamicTable.Wasm\DynamicTable.Wasm.csproj", "{93872A68-577C-4E4D-B238-7BCC8ED2357D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Grpc", "src\DynamicTable.Grpc\DynamicTable.Grpc.csproj", "{757261A3-CF5C-472D-BD40-820186BF1C23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Shared", "src\DynamicTable.Shared\DynamicTable.Shared.csproj", "{757261A3-CF5C-472D-BD40-820186BF1C23}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Tests", "test\DynamicTable.Tests\DynamicTable.Tests.csproj", "{22545520-A068-4AF4-99AF-F4278DB1B581}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.GrpcServer", "samples\DynamicTable.GrpcServer\DynamicTable.GrpcServer.csproj", "{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Grpc", "src\DynamicTable.Grpc\DynamicTable.Grpc.csproj", "{11AC6B8F-7316-4229-9CC2-383136DFA596}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11AC6B8F-7316-4229-9CC2-383136DFA596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11AC6B8F-7316-4229-9CC2-383136DFA596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11AC6B8F-7316-4229-9CC2-383136DFA596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11AC6B8F-7316-4229-9CC2-383136DFA596}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{757261A3-CF5C-472D-BD40-820186BF1C23} = {1403DF01-0BDD-4ED5-B512-91967F84FAD1}
 		{22545520-A068-4AF4-99AF-F4278DB1B581} = {F92559B7-AB27-4F3A-A980-7B94D24ED55D}
 		{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D} = {4C6F1049-2FC4-4283-A57B-0D139FB566DD}
+		{11AC6B8F-7316-4229-9CC2-383136DFA596} = {1403DF01-0BDD-4ED5-B512-91967F84FAD1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FAA76DFA-DCBB-4645-89D0-259902CD133F}

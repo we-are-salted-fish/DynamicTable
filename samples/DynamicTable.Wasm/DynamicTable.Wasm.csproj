@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\DynamicTable.Grpc\DynamicTable.Grpc.csproj" />
     <ProjectReference Include="..\..\src\DynamicTable\DynamicTable.csproj" />
   </ItemGroup>
 

@@ -1,14 +1,19 @@
-﻿
-@inject IJSRuntime JS;
+﻿@inherits ComponentBase
 
 <div class="my-component">
     This Blazor component is defined in the <strong>DynamicTable</strong> package.
 </div>
 
-@code{
-    protected override async Task OnInitializedAsync()
+<button @onclick="Test">测试</button>
+
+<br>
+
+<button @onclick="TestGrpc">测试Grpc</button>
+
+<div>
+    结果 : 
+    @foreach (var temp in _list)
     {
-        await using var js = new ExampleJsInterop(JS);
-        await js.Prompt("12314124");
+        <div>@temp</div>
     }
-}
+</div>
