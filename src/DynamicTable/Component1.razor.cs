@@ -26,7 +26,7 @@ namespace DynamicTable
 
         private async Task TestGrpc()
         { 
-            using var cancel = new CancellationTokenSource(TimeSpan.FromSeconds(2));
+            using var cancel = new CancellationTokenSource(TimeSpan.FromMilliseconds(500));
             var options = new CallOptions();
             try
             {

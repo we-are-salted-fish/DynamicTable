@@ -1,17 +1,11 @@
-﻿@inherits ComponentBase
-
-<div class="my-component">
+﻿<div class="my-component">
+    <button @onclick="TestGrpc">测试Grpc</button>
     This Blazor component is defined in the <strong>DynamicTable</strong> package.
+    <button @onclick="Test">测试</button>
 </div>
 
-<button @onclick="Test">测试</button>
-
-<br>
-
-<button @onclick="TestGrpc">测试Grpc</button>
-
 <div>
-    结果 : 
+    结果 :
     @foreach (var temp in _list)
     {
         <div>@temp</div>
