@@ -21,6 +21,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.GrpcServer", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Grpc", "src\DynamicTable.Grpc\DynamicTable.Grpc.csproj", "{11AC6B8F-7316-4229-9CC2-383136DFA596}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{182A5F9C-950B-46B6-9BA4-D05BC30228AB}"
+ProjectSection(SolutionItems) = preProject
+	LICENSE = LICENSE
+	.gitignore = .gitignore
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
