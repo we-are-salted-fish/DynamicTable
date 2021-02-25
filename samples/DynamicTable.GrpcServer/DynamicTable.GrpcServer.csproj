@@ -5,15 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.34.0" />
-    <PackageReference Include="Grpc.AspNetCore.Web" Version="2.35.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="5.0.2" />
-    <PackageReference Include="protobuf-net.Grpc.AspNetCore" Version="1.0.147" />
-    <PackageReference Include="protobuf-net.Grpc.AspNetCore.Reflection" Version="1.0.147" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DynamicTable.Shared\DynamicTable.Shared.csproj" />
+    <ProjectReference Include="..\..\src\DynamicTable.Grpc\DynamicTable.Grpc.csproj" />
     <ProjectReference Include="..\DynamicTable.Wasm\DynamicTable.Wasm.csproj" />
   </ItemGroup>
 

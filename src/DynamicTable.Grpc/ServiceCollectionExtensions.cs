@@ -1,8 +1,6 @@
-﻿using System;
-using System.Net.Http;
-using DynamicTable.Shared;
-using Grpc.Net.Client.Web;
-using ProtoBuf.Grpc.ClientFactory;
+﻿using DynamicTable.Grpc.Services;
+using Microsoft.AspNetCore.Builder;
+using ProtoBuf.Grpc.Server;
 
 
 // ReSharper disable once CheckNamespace
@@ -10,21 +8,31 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection UseGrpc(this IServiceCollection services, string address)
+        public static void AddDynamicTableGrpc(this IServiceCollection services)
         {
-            services
-                .AddCodeFirstGrpcClient<ITestService>((provider, options) => { options.Address = new Uri(address); })
-                .ConfigureHttpClient((provider, http) =>
-                {
-                    var state = provider.GetService<StateContainer>();
-                    if (state?.IsLogin ?? false)
-                    {
-                        http.DefaultRequestHeaders.Add("Authorization", state.AccessToken);
-                    }
-                })
-                .ConfigurePrimaryHttpMessageHandler(() =>
-                    new GrpcWebHandler(GrpcWebMode.GrpcWebText, new HttpClientHandler()));
-            return services;
+            services.AddCodeFirstGrpc(config =>
+            {
+                config.ResponseCompressionLevel = System.IO.Compression.CompressionLevel.Optimal;
+            });
+            services.AddCodeFirstGrpcReflection();
+            
+            services.AddCors(o => o.AddPolicy("AllowAll", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .WithExposedHeaders("Grpc-Status", "Grpc-Message", "Grpc-Encoding", "Grpc-Accept-Encoding");
+            }));
+        }
+
+        public static void UseDynamicTableGrpcServer(this IApplicationBuilder app)
+        {
+            app.UseEndpoints(endpoints =>
+            {
+
+                endpoints.MapGrpcService<MyTimeService>()
+                    .EnableGrpcWeb().RequireCors("AllowAll");
+            });
         }
     }
 }

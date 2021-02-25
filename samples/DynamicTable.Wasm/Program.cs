@@ -15,7 +15,7 @@ namespace DynamicTable.Wasm
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-            builder.Services.AddDynamicTable().UseGrpc("https://localhost:5001");
+            builder.Services.AddDynamicTable("https://localhost:5001");
 
             await builder.Build().RunAsync();
         }

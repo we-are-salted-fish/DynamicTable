@@ -5,7 +5,7 @@ using System.Threading;
 using DynamicTable.Shared;
 using ProtoBuf.Grpc;
 
-namespace DynamicTable.GrpcServer.Services
+namespace DynamicTable.Grpc.Services
 {
     public class MyTimeService: ITestService
     {
