@@ -29,7 +29,6 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             app.UseEndpoints(endpoints =>
             {
-
                 endpoints.MapGrpcService<MyTimeService>()
                     .EnableGrpcWeb().RequireCors("AllowAll");
             });

@@ -16,8 +16,6 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton<StateContainer>();
             services.AddSingleton<ExampleJsInterop>();
             
-            //这里要判断，如果是 Grpc 或者 Http
-            
             services
                 .AddCodeFirstGrpcClient<ITestService>((provider, options) => { options.Address = new Uri(address); })
                 .ConfigureHttpClient((provider, http) =>
