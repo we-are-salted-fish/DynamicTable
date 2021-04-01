@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using DynamicTable.Models;
+using DynamicTable.Shared.Models;
 using Microsoft.AspNetCore.Components;
 
 namespace DynamicTable

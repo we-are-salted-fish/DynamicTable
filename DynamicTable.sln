@@ -9,23 +9,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F92559B7-A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{4C6F1049-2FC4-4283-A57B-0D139FB566DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable", "src\DynamicTable\DynamicTable.csproj", "{C2D855A1-5787-49E5-BA1F-350F32A14A58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTable", "src\DynamicTable\DynamicTable.csproj", "{C2D855A1-5787-49E5-BA1F-350F32A14A58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Wasm", "samples\DynamicTable.Wasm\DynamicTable.Wasm.csproj", "{93872A68-577C-4E4D-B238-7BCC8ED2357D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTable.Wasm", "samples\DynamicTable.Wasm\DynamicTable.Wasm.csproj", "{93872A68-577C-4E4D-B238-7BCC8ED2357D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Shared", "src\DynamicTable.Shared\DynamicTable.Shared.csproj", "{757261A3-CF5C-472D-BD40-820186BF1C23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTable.Shared", "src\DynamicTable.Shared\DynamicTable.Shared.csproj", "{757261A3-CF5C-472D-BD40-820186BF1C23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Tests", "test\DynamicTable.Tests\DynamicTable.Tests.csproj", "{22545520-A068-4AF4-99AF-F4278DB1B581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTable.Tests", "test\DynamicTable.Tests\DynamicTable.Tests.csproj", "{22545520-A068-4AF4-99AF-F4278DB1B581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.GrpcServer", "samples\DynamicTable.GrpcServer\DynamicTable.GrpcServer.csproj", "{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTable.GrpcServer", "samples\DynamicTable.GrpcServer\DynamicTable.GrpcServer.csproj", "{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Grpc", "src\DynamicTable.Grpc\DynamicTable.Grpc.csproj", "{11AC6B8F-7316-4229-9CC2-383136DFA596}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTable.Grpc", "src\DynamicTable.Grpc\DynamicTable.Grpc.csproj", "{11AC6B8F-7316-4229-9CC2-383136DFA596}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{182A5F9C-950B-46B6-9BA4-D05BC30228AB}"
-ProjectSection(SolutionItems) = preProject
-	LICENSE = LICENSE
-	.gitignore = .gitignore
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.MD = README.MD
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

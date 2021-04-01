@@ -9,6 +9,7 @@ namespace DynamicTable.Grpc.Services
 {
     public class MyTimeService: ITestService
     {
+    
         public IAsyncEnumerable<string> SubscribeAsync(CallContext context = default)
             => SubscribeAsyncImpl(context.CancellationToken);
 

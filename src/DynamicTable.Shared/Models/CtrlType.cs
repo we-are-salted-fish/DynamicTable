@@ -1,4 +1,4 @@
-﻿namespace DynamicTable.Models
+﻿namespace DynamicTable.Shared.Models
 {
     public enum CtrlType
     {

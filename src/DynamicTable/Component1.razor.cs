@@ -42,7 +42,7 @@ namespace DynamicTable
             }
             catch (OperationCanceledException e)
             {
-                
+                Console.WriteLine(e);
             }
         }
     }

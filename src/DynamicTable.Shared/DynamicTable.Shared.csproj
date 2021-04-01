@@ -10,9 +10,5 @@
     <PackageReference Include="protobuf-net.Grpc" Version="1.0.147" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Model" />
-  </ItemGroup>
-
 
 </Project>

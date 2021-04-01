@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ProtoBuf.Grpc.Server;
 
 namespace DynamicTable.GrpcServer
 {
@@ -11,7 +9,7 @@ namespace DynamicTable.GrpcServer
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDynamicTableGrpc();
+            services.AddDynamicTableGrpc<DynamicTableConfig>();
             
             services.AddRazorPages();
         }

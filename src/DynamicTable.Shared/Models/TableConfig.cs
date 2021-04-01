@@ -1,11 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
-namespace DynamicTable.Models
+namespace DynamicTable.Shared.Models
 {
+
+    
     public class TableConfig
     {
         public string Table { get; set; }
         
         public List<ColumnConfig> Columns { get; set; }
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using DynamicTable.Grpc.Services;
+﻿using DynamicTable.Grpc;
+using DynamicTable.Grpc.Services;
 using Microsoft.AspNetCore.Builder;
 using ProtoBuf.Grpc.Server;
 
@@ -8,7 +9,7 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
-        public static void AddDynamicTableGrpc(this IServiceCollection services)
+        public static void AddDynamicTableGrpc<T>(this IServiceCollection services) where  T: IDynamicTableConfig
         {
             services.AddCodeFirstGrpc(config =>
             {
@@ -23,7 +24,10 @@ namespace Microsoft.Extensions.DependencyInjection
                     .AllowAnyHeader()
                     .WithExposedHeaders("Grpc-Status", "Grpc-Message", "Grpc-Encoding", "Grpc-Accept-Encoding");
             }));
+            //添加配置文件
+            services.AddSingleton<IDynamicTableConfig, T>();
         }
+        
 
         public static void UseDynamicTableGrpcServer(this IApplicationBuilder app)
         {
