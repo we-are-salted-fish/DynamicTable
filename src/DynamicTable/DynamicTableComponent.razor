@@ -1,12 +1,17 @@
-﻿<div class="">
-    <!--表头-->
-    <div>
-        @foreach (var column in TableConfig.Columns)
-        {
-            <div>@column.HeadText</div>
-        }
-    </div>
-    <div>
-        
-    </div>
-</div>
+﻿@typeparam TItem
+
+<table class="table">
+    @_header(this)
+    
+</table>
+
+@code{
+
+    RenderFragment<DynamicTableComponent<TItem>> _header = table =>
+        @<Template>
+            <CascadingValue Name="IsHeader" Value="true">
+                @table.ChildContent(_fieldModel)
+            </CascadingValue>
+        </Template>;
+
+}

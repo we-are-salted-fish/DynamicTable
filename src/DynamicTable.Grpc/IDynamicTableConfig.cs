@@ -1,9 +1,9 @@
 ﻿namespace DynamicTable.Grpc
 {
-    public abstract class IDynamicTableConfig
+    public interface IDynamicTableConfig
     {
-        public abstract bool SplitTable { get; }
+         bool SplitTable { get; }
 
-        public abstract string GetSplitTableName(string tableName);
+         string GetSplitTableName(string tableName);
     }
 }

@@ -9,7 +9,7 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
-        public static void AddDynamicTableGrpc<T>(this IServiceCollection services) where  T: IDynamicTableConfig
+        public static void AddDynamicTableGrpc<T>(this IServiceCollection services) where  T: class,IDynamicTableConfig
         {
             services.AddCodeFirstGrpc(config =>
             {
@@ -25,7 +25,7 @@ namespace Microsoft.Extensions.DependencyInjection
                     .WithExposedHeaders("Grpc-Status", "Grpc-Message", "Grpc-Encoding", "Grpc-Accept-Encoding");
             }));
             //添加配置文件
-            services.AddSingleton<IDynamicTableConfig, T>();
+            services.AddSingleton<IDynamicTableConfig,T>();
         }
         
 

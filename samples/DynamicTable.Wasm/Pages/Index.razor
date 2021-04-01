@@ -2,7 +2,28 @@
 
 <h1>Hello, world!</h1>
 
-<DynamicTableComponent ></DynamicTableComponent>
+<DynamicTableComponent DataSource="@_pets" TItem="Pet">
+    <Column @bind-Field="@context.PetId">
+        <a>@context.PetId</a>
+    </Column>
+    <Column @bind-Field="@context.Name">
+        <a>@context.Name</a>
+    </Column>
+</DynamicTableComponent>
 
 @code{
+
+    private class Pet
+    {
+        public int PetId { get; set; }
+        public string Name { get; set; }
+    }
+
+    private List<Pet> _pets = new()
+    {
+        new Pet {PetId = 2, Name = "Mr. Bigglesworth"},
+        new Pet {PetId = 4, Name = "Salem Saberhagen"},
+        new Pet {PetId = 7, Name = "K-9"}
+    };
+
 }
