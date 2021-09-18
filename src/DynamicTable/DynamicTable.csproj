@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <StaticWebAssetBasePath>_content/dynamicTable</StaticWebAssetBasePath>
   </PropertyGroup>
   
@@ -11,8 +11,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.4" />
-    <PackageReference Include="Grpc.Net.Client.Web" Version="2.35.0" />
-    <PackageReference Include="protobuf-net.Grpc.ClientFactory" Version="1.0.147" />
+    <PackageReference Include="Grpc.Net.Client.Web" Version="2.40.0-pre1" />
+    <PackageReference Include="protobuf-net.Grpc.ClientFactory" Version="1.0.152" />
   </ItemGroup>
 
   <ItemGroup>
