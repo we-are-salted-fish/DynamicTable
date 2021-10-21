@@ -1,0 +1,18 @@
+﻿@page "/"
+
+<h1>例子3</h1>
+
+<div class="d-table">
+    @if (Users == null)
+    {
+        <div>empty</div>
+    }
+    else
+    {
+        @foreach (var user in Users)
+        {
+            <div>@user.FullName</div>
+        }
+    }
+
+</div>
