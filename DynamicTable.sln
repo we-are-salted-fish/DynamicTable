@@ -3,29 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1403DF01-0BDD-4ED5-B512-91967F84FAD1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F92559B7-AB27-4F3A-A980-7B94D24ED55D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{4C6F1049-2FC4-4283-A57B-0D139FB566DD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable", "src\DynamicTable\DynamicTable.csproj", "{C2D855A1-5787-49E5-BA1F-350F32A14A58}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Wasm", "samples\DynamicTable.Wasm\DynamicTable.Wasm.csproj", "{93872A68-577C-4E4D-B238-7BCC8ED2357D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Shared", "src\DynamicTable.Shared\DynamicTable.Shared.csproj", "{757261A3-CF5C-472D-BD40-820186BF1C23}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Tests", "test\DynamicTable.Tests\DynamicTable.Tests.csproj", "{22545520-A068-4AF4-99AF-F4278DB1B581}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.GrpcServer", "samples\DynamicTable.GrpcServer\DynamicTable.GrpcServer.csproj", "{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTable.Grpc", "src\DynamicTable.Grpc\DynamicTable.Grpc.csproj", "{11AC6B8F-7316-4229-9CC2-383136DFA596}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTable.Tests", "test\DynamicTable.Tests\DynamicTable.Tests.csproj", "{22545520-A068-4AF4-99AF-F4278DB1B581}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{182A5F9C-950B-46B6-9BA4-D05BC30228AB}"
-ProjectSection(SolutionItems) = preProject
-	LICENSE = LICENSE
-	.gitignore = .gitignore
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.MD = README.MD
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E8E3DC74-0081-4C12-A505-C5E02771CA96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTable.Server", "src\DynamicTable.Server\DynamicTable.Server.csproj", "{6654C1AE-7AE5-4731-92F7-EA517EC0A6DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTable.Wasm", "src\DynamicTable.Wasm\DynamicTable.Wasm.csproj", "{A824951D-8539-46E6-AF0B-2457C8954FF1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicTable.Shared", "src\DynamicTable.Shared\DynamicTable.Shared.csproj", "{79160DA0-E8E7-4FB6-B179-CB522065805B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,41 +28,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C2D855A1-5787-49E5-BA1F-350F32A14A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2D855A1-5787-49E5-BA1F-350F32A14A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2D855A1-5787-49E5-BA1F-350F32A14A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2D855A1-5787-49E5-BA1F-350F32A14A58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{93872A68-577C-4E4D-B238-7BCC8ED2357D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93872A68-577C-4E4D-B238-7BCC8ED2357D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93872A68-577C-4E4D-B238-7BCC8ED2357D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93872A68-577C-4E4D-B238-7BCC8ED2357D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{757261A3-CF5C-472D-BD40-820186BF1C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{757261A3-CF5C-472D-BD40-820186BF1C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{757261A3-CF5C-472D-BD40-820186BF1C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{757261A3-CF5C-472D-BD40-820186BF1C23}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22545520-A068-4AF4-99AF-F4278DB1B581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22545520-A068-4AF4-99AF-F4278DB1B581}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22545520-A068-4AF4-99AF-F4278DB1B581}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22545520-A068-4AF4-99AF-F4278DB1B581}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11AC6B8F-7316-4229-9CC2-383136DFA596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11AC6B8F-7316-4229-9CC2-383136DFA596}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11AC6B8F-7316-4229-9CC2-383136DFA596}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11AC6B8F-7316-4229-9CC2-383136DFA596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6654C1AE-7AE5-4731-92F7-EA517EC0A6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6654C1AE-7AE5-4731-92F7-EA517EC0A6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6654C1AE-7AE5-4731-92F7-EA517EC0A6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6654C1AE-7AE5-4731-92F7-EA517EC0A6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A824951D-8539-46E6-AF0B-2457C8954FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A824951D-8539-46E6-AF0B-2457C8954FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A824951D-8539-46E6-AF0B-2457C8954FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A824951D-8539-46E6-AF0B-2457C8954FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79160DA0-E8E7-4FB6-B179-CB522065805B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79160DA0-E8E7-4FB6-B179-CB522065805B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79160DA0-E8E7-4FB6-B179-CB522065805B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79160DA0-E8E7-4FB6-B179-CB522065805B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C2D855A1-5787-49E5-BA1F-350F32A14A58} = {1403DF01-0BDD-4ED5-B512-91967F84FAD1}
-		{93872A68-577C-4E4D-B238-7BCC8ED2357D} = {4C6F1049-2FC4-4283-A57B-0D139FB566DD}
-		{757261A3-CF5C-472D-BD40-820186BF1C23} = {1403DF01-0BDD-4ED5-B512-91967F84FAD1}
 		{22545520-A068-4AF4-99AF-F4278DB1B581} = {F92559B7-AB27-4F3A-A980-7B94D24ED55D}
-		{2F1CA36D-2FD4-42C1-B167-2D59BB2BCB9D} = {4C6F1049-2FC4-4283-A57B-0D139FB566DD}
-		{11AC6B8F-7316-4229-9CC2-383136DFA596} = {1403DF01-0BDD-4ED5-B512-91967F84FAD1}
+		{6654C1AE-7AE5-4731-92F7-EA517EC0A6DC} = {E8E3DC74-0081-4C12-A505-C5E02771CA96}
+		{A824951D-8539-46E6-AF0B-2457C8954FF1} = {E8E3DC74-0081-4C12-A505-C5E02771CA96}
+		{79160DA0-E8E7-4FB6-B179-CB522065805B} = {E8E3DC74-0081-4C12-A505-C5E02771CA96}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FAA76DFA-DCBB-4645-89D0-259902CD133F}
