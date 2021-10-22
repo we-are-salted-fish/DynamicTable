@@ -11,8 +11,11 @@
     {
         @foreach (var user in Users)
         {
-            <div>@user.FullName</div>
+            <div>@user.UserName</div>
+            @foreach (var order in user.Orders)
+            {
+                <div>@order.OrderId @order.Item</div>
+            }
         }
     }
-
 </div>
