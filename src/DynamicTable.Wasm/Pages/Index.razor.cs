@@ -9,6 +9,12 @@ namespace DynamicTable.Wasm.Pages
 {
     public partial class Index
     {
+
+        private int PageIndex { get; set; } = 0;
+
+        private int PageSize { get; set; } = 10;
+        
+        
         [Inject]
         private HttpClient Http { get; set; }
 
@@ -16,7 +22,18 @@ namespace DynamicTable.Wasm.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            Users = await Http.GetFromJsonAsync<User[]>("api/user?page=0&pagesize=10");
+            await LoadDataAsync();
+        }
+
+        protected virtual async Task LoadDataAsync()
+        {
+            Users = await Http.GetFromJsonAsync<User[]>($"api/user?page={PageIndex}&pagesize={PageSize}");    
+        }
+
+        private async Task SetPageIndex()
+        {
+            PageIndex = PageIndex + 1;
+            await LoadDataAsync();
         }
     }
 }

@@ -3,6 +3,9 @@
 <h1>例子3</h1>
 
 <div class="d-table">
+
+
+
     @if (Users == null)
     {
         <div>empty</div>
@@ -11,11 +14,18 @@
     {
         @foreach (var user in Users)
         {
-            <div>@user.UserName</div>
-            @foreach (var order in user.Orders)
-            {
-                <div>@order.OrderId @order.Item</div>
-            }
+            <div>
+                <span>@user.UserName</span>
+                @foreach (var order in user.Orders)
+                {
+                    <span>@order.OrderId @order.Item</span>
+                }
+            </div>
         }
+
+        <div>
+            <div>@PageIndex</div>
+            <div @onclick="SetPageIndex">下一页</div>
+        </div>
     }
 </div>

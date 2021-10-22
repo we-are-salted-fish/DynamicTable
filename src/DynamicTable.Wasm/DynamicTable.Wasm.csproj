@@ -15,4 +15,8 @@
     <ProjectReference Include="..\DynamicTable.Shared\DynamicTable.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Compoents" />
+  </ItemGroup>
+
 </Project>
